@@ -18,9 +18,42 @@ class Individual < ActiveRecord::Base
   has_many :previous_givers, through: :previous_receiving_pairs, source: :giver
 
   validates :family, :name, presence: true
+  attr_accessor :santa
 
   def self.generate_pairs
-    # awesome stuff!
+    people = Individual.all.includes(:previous_recipients, :family).to_a
+    santas = people.dup
+    people.each do |person|
+       person.santa = santas.delete_at(rand(santas.size))
+    end
+
+    finished = false
+    until finished
+      finished = true
+      people.each do |person|
+         unless person.santa.can_give_to?(person)
+           candidates = people.select { |p|
+               person.santa.can_give_to?(p) &&
+               p.santa.can_give_to?(person)
+           }
+           raise if candidates.empty?
+           other = candidates[rand(candidates.size)]
+           temp = person.santa
+           person.santa = other.santa
+           other.santa = temp
+           finished = false
+         end
+      end
+    end
+
+    people.sort_by(&:family).each do |person|
+      puts "#{person.santa.name} gives to #{person.name}"
+    end
+    return true
+  end
+
+  def can_give_to?(other)
+    !illegal_matches.include?(other)
   end
 
   def same_fam

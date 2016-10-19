@@ -31,9 +31,9 @@ harry_3 = Individual.create(family_id: alversons.id, name: "Harry Alverson III")
 katie_a = Individual.create(family_id: alversons.id, name: "Katie Alverson")
 harry_4 = Individual.create(family_id: alversons.id, name: "Harry Alverson IV")
 louise = Individual.create(family_id: alversons.id, name: "Louise Alverson")
-lauren = Individual.create(family_id: alversons.id, name: "Louise Alverson")
+laurenricky = Individual.create(family_id: alversons.id, name: "Lauren Alverson and Ricky Mayfield")
 # ricky = Individual.create(family_id: alversons.id, name: "Ricky Mayfield")
-lily = Individual.create(family_id: alversons.id, name: "Louise Alverson")
+lily = Individual.create(family_id: alversons.id, name: "Lily Alverson")
 
 # Lexington Groveses
 chris = Individual.create(family_id: lex_groves.id, name: "Chris Groves")

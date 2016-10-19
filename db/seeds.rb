@@ -52,10 +52,49 @@ lucy = Individual.create(family_id: vt_groves.id, name: "Lucy Groves")
 # Campos
 jack = Individual.create(family_id: campos.id, name: "Jack Campo")
 betsy_c = Individual.create(family_id: campos.id, name: "Betsy Campo")
-katie = Individual.create(family_id: campos.id, name: "Katie Campo")
+katie_c = Individual.create(family_id: campos.id, name: "Katie Campo")
 warren = Individual.create(family_id: campos.id, name: "Warren Ryan")
 gigi = Individual.create(family_id: campos.id, name: "Gigi Campo")
 max = Individual.create(family_id: campos.id, name: "Max Blum")
 will = Individual.create(family_id: campos.id, name: "Will Campo")
 
 # Previous Matches
+
+PreviousPair.destroy_all
+# 2015:
+# campos
+PreviousPair.create!(giver: betsy_c, recipient: billy, year: 2015)
+PreviousPair.create!(giver: jack, recipient: mac, year: 2015)
+PreviousPair.create!(giver: katie_c, recipient: suzy, year: 2015)
+PreviousPair.create!(giver: warren, recipient: sarah, year: 2015)
+PreviousPair.create!(giver: gigi, recipient: meg, year: 2015)
+PreviousPair.create!(giver: will, recipient: chris, year: 2015)
+
+# alvies
+PreviousPair.create!(giver: harry_3, recipient: laurie, year: 2015)
+PreviousPair.create!(giver: katie_a, recipient: katie_c, year: 2015)
+PreviousPair.create!(giver: harry_4, recipient: dan, year: 2015)
+PreviousPair.create!(giver: louise, recipient: martha, year: 2015)
+PreviousPair.create!(giver: laurenricky, recipient: will, year: 2015)
+PreviousPair.create!(giver: lily, recipient: gigi, year: 2015)
+
+# littlefields
+PreviousPair.create!(giver: suzy, recipient: lily, year: 2015)
+PreviousPair.create!(giver: josh, recipient: jack, year: 2015)
+PreviousPair.create!(giver: betsy_p, recipient: warren, year: 2015)
+PreviousPair.create!(giver: dan, recipient: gretta, year: 2015)
+PreviousPair.create!(giver: billy, recipient: betsy_c, year: 2015)
+
+# lex groveses
+PreviousPair.create!(giver: martha, recipient: harry_3, year: 2015)
+PreviousPair.create!(giver: chris, recipient: lucy, year: 2015)
+PreviousPair.create!(giver: sarah, recipient: josh, year: 2015)
+PreviousPair.create!(giver: tim, recipient: laurenricky, year: 2015)
+
+
+# Vermont Groveses
+PreviousPair.create!(giver: laurie, recipient: louise, year: 2015)
+PreviousPair.create!(giver: meg, recipient: betsy_p, year: 2015)
+PreviousPair.create!(giver: mac, recipient: harry_4, year: 2015)
+PreviousPair.create!(giver: gretta, recipient: katie_a, year: 2015)
+PreviousPair.create!(giver: lucy, recipient: tim, year: 2015)

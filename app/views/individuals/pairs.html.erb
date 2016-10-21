@@ -1,0 +1,4 @@
+<% @pairs.sort_by { |k,v| k.family }.each do |giver, recipient| %>
+  <%= giver.name %> gives to <%= recipient.name %>
+  <br>
+<% end %>

@@ -38,18 +38,18 @@ class Individual < ActiveRecord::Base
            }
            raise if candidates.empty?
            other = candidates[rand(candidates.size)]
-           temp = person.santa
-           person.santa = other.santa
-           other.santa = temp
+           person.santa, other.santa = other.santa, person.santa
            finished = false
          end
       end
     end
 
-    people.sort_by(&:family).each do |person|
-      puts "#{person.santa.name} gives to #{person.name}"
+    giving_pairs = {}
+    people.each do |person|
+      giving_pairs[person.santa] = person
     end
-    return true
+
+    giving_pairs
   end
 
   def can_give_to?(other)

@@ -13,3 +13,87 @@
  *= require_tree .
  *= require_self
  */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+ 	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+ 	font-size: 100%;
+ 	font: inherit;
+  font-family: sans-serif;
+ 	vertical-align: baseline;
+  text-decoration: none;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+ 	display: block;
+ }
+ body {
+ 	line-height: 1;
+  background-color: lightgreen;
+  color: darkred;
+  width: 100%;
+ }
+ ol, ul {
+ 	list-style: none;
+ }
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  padding: 20px;
+}
+
+p {
+  width: 65%;
+  margin: 20px auto;
+  font-size: 18px;
+}
+
+ul {
+  width: 450px;
+  margin: auto;
+}
+
+li {
+  margin: 5px;
+  width: 100%;
+}
+
+li > b {
+  color: darkgreen;
+  font-weight: bold;
+  width: 30%;
+}
+
+li > i {
+  color: red;
+  font-weight: bold;
+  width: 30%;
+}
+
+a {
+  display: block;
+  font-size: 24px;
+  margin: auto;
+  width: 250px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid red;
+  color: lightgreen;
+  background-color: darkgreen;
+  cursor: pointer;
+}

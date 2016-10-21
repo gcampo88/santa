@@ -1,4 +1,18 @@
-<% @pairs.sort_by { |k,v| k.family }.each do |giver, recipient| %>
-  <%= giver.name %> gives to <%= recipient.name %>
-  <br>
-<% end %>
+<h1>
+  Welcome to Grovesian Secret Santa!
+</h1>
+<p>
+  Below is a crack at santa pairs for this year. If you like it, copy and paste it to yourself
+  and get cracking on those emails! If you don't like it, just press the button
+  at the bottom to get a new set.
+</p>
+
+<ul>
+  <% @pairs.sort_by { |k,v| k.family }.each do |giver, recipient| %>
+    <li>
+      <b><%= giver.name %></b> gives to <i><%= recipient.name %></i>
+    </li>
+  <% end %>
+</ul>
+
+<a href="#">I don't like these pairs. Do it again!</a>
